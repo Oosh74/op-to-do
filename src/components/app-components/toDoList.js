@@ -8,6 +8,7 @@ class ToDoList {
   }
 
   getList() {
+    console.log(this.toDoList.length);
     return this.toDoList;
   }
 }

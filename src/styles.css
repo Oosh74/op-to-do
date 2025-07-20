@@ -10,6 +10,7 @@
 /* Remove default margin */
 * {
   margin: 0;
+  border: 1px solid blue;
 }
 
 /* Prevent font size inflation */
@@ -41,6 +42,7 @@ ol {
 }
 
 /* Set core body defaults */
+
 body {
   min-height: 100vh;
   line-height: 1.5;
@@ -184,6 +186,49 @@ h6 {
 
 p {
   font-size: clamp(1rem, calc(0.96rem + 0.22vw), 1.13rem);
+}
+
+header,
+footer,
+section {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.content-container {
+  max-width: 1600px;
+  width: 90%;
+}
+
+.app {
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  height: 80vh;
+}
+
+.sidebar {
+  flex-shrink: 10;
+  flex-grow: 0;
+}
+
+.to-do-container {
+  flex-grow: 1;
+  flex-shrink: 1;
+}
+
+.to-do-item {
+  background-color: orange;
+  height: 100px;
+  width: 100px;
+}
+
+.list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
 }
 
 /* Media queries */
