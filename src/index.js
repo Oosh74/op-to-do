@@ -1,9 +1,9 @@
 import './styles.css';
-import { newTodo } from './components/todoFactory.js';
+// import { ToDoFactory } from './components/todoFactory.js';
 import { ToDoList } from './components/toDoList.js';
+import { ToDoForm } from './components/form.js';
 
-for (const property in newTodo) {
-  let toDoData = document.createElement('p');
-  toDoData.textContent = newTodo[property];
-  document.querySelector('body').append(toDoData);
-}
+const toDoListInstance = new ToDoList();
+
+ToDoForm(toDoListInstance);
+// console.log(ToDoList.getList());

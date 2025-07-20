@@ -1,0 +1,18 @@
+import { ToDoFactory } from './todoFactory.js';
+import { renderList } from './toDoListUI.js';
+// import { ToDoList } from './toDoList.js';
+
+const ToDoForm = (toDoListInstance) => {
+  const form = document.querySelector('form');
+
+  form.addEventListener('submit', (event) => {
+    event.preventDefault();
+    const formData = new FormData(event.target);
+    const formObject = Object.fromEntries(formData.entries());
+    const newToDo = ToDoFactory.createNewTodo(formObject);
+    toDoListInstance.addToDo(newToDo);
+    renderList(toDoListInstance);
+  });
+};
+
+export { ToDoForm };
