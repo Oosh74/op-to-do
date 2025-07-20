@@ -1,4 +1,8 @@
 import './styles.css';
-import { greeting } from './components/greeting.js';
+import { newTodo } from './components/todoFactory.js';
 
-console.log(greeting);
+for (const property in newTodo) {
+  let toDoData = document.createElement('p');
+  toDoData.textContent = newTodo[property];
+  document.querySelector('body').append(toDoData);
+}
