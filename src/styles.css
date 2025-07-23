@@ -197,6 +197,10 @@ section {
   justify-content: center;
 }
 
+header {
+  background-color: white;
+}
+
 .content-container {
   max-width: 1600px;
   width: 90%;
@@ -210,28 +214,44 @@ section {
 }
 
 .sidebar {
+  display: flex;
+  flex-direction: column;
   flex-shrink: 5;
   flex-grow: 0;
+  background-color: white;
 }
 
 .to-do-container {
   flex-grow: 1;
   flex-shrink: 1;
+  background-color: #f6f8fa;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.to-do-container h2 {
+  width: 50%;
 }
 
 .list {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
   gap: 32px;
+  background-color: #eff1f3;
+  width: 50%;
+  padding: 24px;
+  justify-self: center;
 }
 
 .to-do-item {
   display: flex;
-  background-color: orange;
+  background-color: white;
   padding: 42px;
   gap: 8px;
+  flex-basis: 30%;
 }
 
 /* Media queries */
