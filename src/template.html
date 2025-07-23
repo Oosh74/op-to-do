@@ -17,21 +17,33 @@
         <div class="sidebar">
           <h2>Sidebar</h2>
           <form>
+            <p>
+              <span aria-label="required">*</span> indicates a required field.
+            </p>
             <div class="form-item-container">
-              <label for="title">Title</label
-              ><input id="title" name="title" type="text" />
+              <label for="title"
+                >Title<span aria-label="required">*</span></label
+              ><input id="title" name="title" type="text" required />
             </div>
             <div class="form-item-container">
-              <label for="description">Description</label
-              ><input id="description" name="description" type="text" />
+              <label for="description"
+                >Description<span aria-label="required">*</span></label
+              ><input
+                id="description"
+                name="description"
+                type="text"
+                required
+              />
             </div>
             <div class="form-item-container">
-              <label for="date">Due Date</label
-              ><input id="date" name="date" type="text" />
+              <label for="date"
+                >Due Date<span aria-label="required">*</span></label
+              ><input id="date" name="date" type="text" required />
             </div>
             <div class="form-item-container">
-              <label for="priority">Priority</label
-              ><input id="priority" name="priority" type="text" />
+              <label for="priority"
+                >Priority<span aria-label="required">*</span></label
+              ><input id="priority" name="priority" type="text" required />
             </div>
             <div class="form-item-container">
               <button type="submit">Add to Do</button>
