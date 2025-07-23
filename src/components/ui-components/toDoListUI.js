@@ -5,10 +5,6 @@ const renderList = (newList) => {
 
   listContainer.innerHTML = '';
 
-  // if (newList.getList.) {
-  //   return;
-  // }
-
   newList.getList.forEach((item) => {
     const toDoListContainer = document.createElement('div');
     toDoListContainer.classList.add('to-do-item');
