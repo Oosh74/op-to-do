@@ -1,27 +1,40 @@
+import { toDoListInstance } from '../..';
+
 const renderList = (newList) => {
   const listContainer = document.querySelector('.list');
 
   listContainer.innerHTML = '';
 
+  // if (newList.getList.) {
+  //   return;
+  // }
+
   newList.getList.forEach((item) => {
-    const toDoItemContainer = document.createElement('div');
-    toDoItemContainer.classList.add('to-do-item');
+    const toDoListContainer = document.createElement('div');
+    toDoListContainer.classList.add('to-do-item');
+
+    const completeBtn = document.createElement('button');
+    completeBtn.classList.add('complete-btn');
+    completeBtn.textContent = 'Complete Task';
+    completeBtn.addEventListener('click', (event) => {
+      console.log('dataset', event.target.parentElement.dataset.id);
+      toDoListInstance.removeToDo(event.target.parentElement.dataset.id);
+      renderList(toDoListInstance);
+    });
 
     for (const property in item) {
-      const toDoData = document.createElement('p');
-      toDoData.textContent = item[property];
-      toDoItemContainer.append(toDoData);
+      if (property !== 'id') {
+        const toDoData = document.createElement('p');
+        toDoData.textContent = item[property];
+        toDoListContainer.append(toDoData);
+      } else {
+        toDoListContainer.dataset.id = item[property];
+      }
     }
+    toDoListContainer.append(completeBtn);
 
-    listContainer.append(toDoItemContainer);
+    listContainer.append(toDoListContainer);
   });
 };
 
 export { renderList };
-
-//refactor to a class
-//array state that "syncs" to the to do list logic
-//basically just re-render the list anytime an action is taken (add, remove, edit)
-//Get items from the logic
-//loop through items and render (spread operator???)
-//Call for a render each time the state is changed

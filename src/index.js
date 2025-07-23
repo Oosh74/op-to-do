@@ -9,3 +9,5 @@ const toDoListInstance = new ToDoList();
 
 ToDoForm(toDoListInstance);
 toDoListProjects();
+
+export { toDoListInstance };

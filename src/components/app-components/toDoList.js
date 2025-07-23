@@ -12,8 +12,10 @@ class ToDoList {
     this.toDoList.push(toDoItem);
   }
 
-  removeToDo(todo) {
-    this.toDoList = this.toDoList.filter((currToDo) => currToDo !== todo);
+  removeToDo(removeTargetId) {
+    return (this.toDoList = this.toDoList.filter((todo) => {
+      return todo.id !== removeTargetId;
+    }));
   }
 }
 
