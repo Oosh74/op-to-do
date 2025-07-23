@@ -3,7 +3,7 @@ const renderList = (newList) => {
 
   listContainer.innerHTML = '';
 
-  newList.getList().forEach((item) => {
+  newList.getList.forEach((item) => {
     const toDoItemContainer = document.createElement('div');
     toDoItemContainer.classList.add('to-do-item');
 

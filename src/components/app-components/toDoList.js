@@ -26,7 +26,10 @@ class Project extends ToDoList {
 
 const toDoListProjects = () => {
   const newProject = new Project('Due Today');
-  return console.log(newProject);
+  newProject.addToDo('Get groceries', 'take a piss');
+  console.log(newProject);
+  newProject.removeToDo('Get groceries');
+  console.log(newProject);
 };
 
 export { ToDoList, toDoListProjects };
