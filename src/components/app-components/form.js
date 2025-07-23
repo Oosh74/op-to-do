@@ -11,6 +11,7 @@ const ToDoForm = (toDoListInstance) => {
     const newToDo = ToDoFactory.createNewTodo(formObject);
     toDoListInstance.addToDo(newToDo);
     renderList(toDoListInstance);
+    form.reset();
   });
 };
 
