@@ -206,11 +206,11 @@ section {
   display: flex;
   align-items: stretch;
   justify-content: center;
-  height: 80vh;
+  min-height: 80vh;
 }
 
 .sidebar {
-  flex-shrink: 10;
+  flex-shrink: 5;
   flex-grow: 0;
 }
 
@@ -219,16 +219,19 @@ section {
   flex-shrink: 1;
 }
 
-.to-do-item {
-  background-color: orange;
-  height: 100px;
-  width: 100px;
+.list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 32px;
 }
 
-.list {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 32px;
+.to-do-item {
+  display: flex;
+  background-color: orange;
+  padding: 42px;
+  gap: 8px;
 }
 
 /* Media queries */

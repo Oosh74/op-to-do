@@ -3,14 +3,30 @@ class ToDoList {
     this.toDoList = [];
   }
 
+  get getList() {
+    console.log(this.toDoList.length);
+    return this.toDoList;
+  }
+
   addToDo(toDoItem) {
     this.toDoList.push(toDoItem);
   }
 
-  getList() {
-    console.log(this.toDoList.length);
-    return this.toDoList;
+  removeToDo(todo) {
+    this.toDoList = this.toDoList.filter((currToDo) => currToDo !== todo);
   }
 }
 
-export { ToDoList };
+class Project extends ToDoList {
+  constructor(projectName) {
+    super();
+    this.projectName = projectName;
+  }
+}
+
+const toDoListProjects = () => {
+  const newProject = new Project('Due Today');
+  return console.log(newProject);
+};
+
+export { ToDoList, toDoListProjects };

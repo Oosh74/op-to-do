@@ -18,3 +18,10 @@ const renderList = (newList) => {
 };
 
 export { renderList };
+
+//refactor to a class
+//array state that "syncs" to the to do list logic
+//basically just re-render the list anytime an action is taken (add, remove, edit)
+//Get items from the logic
+//loop through items and render (spread operator???)
+//Call for a render each time the state is changed
