@@ -31,6 +31,7 @@ class Project extends ToDoList {
 const newProjectForm = () => {
   const projectForm = document.querySelector('#project-form');
   const projectOptionsField = document.querySelector('.project-list-group');
+  const sidebarProjectList = document.querySelector('.sidebar-project-list');
 
   projectForm.addEventListener('submit', (event) => {
     event.preventDefault();
@@ -41,10 +42,16 @@ const newProjectForm = () => {
     projectClassStore.push(newProject);
     projectForm.reset();
 
+    projectOptionsField.innerHTML = '';
+    sidebarProjectList.innerHTML = '';
+
     projectClassStore.map((project) => {
       const projectOption = document.createElement('option');
+      const projectListItem = document.createElement('li');
       projectOption.textContent = project.projectName;
+      projectListItem.textContent = project.projectName;
       projectOptionsField.append(projectOption);
+      sidebarProjectList.appendChild(projectListItem);
     });
   });
 };

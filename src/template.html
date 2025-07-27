@@ -16,6 +16,13 @@
       <div class="content-container app">
         <div class="sidebar">
           <h2>Sidebar</h2>
+          <div class="project-list-container">
+            <h3>Projects</h3>
+            <ul class="sidebar-project-list">
+              <li>Example List</li>
+            </ul>
+          </div>
+          <!-- <dialog> -->
           <form id="task-form">
             <p>
               <span aria-label="required">*</span> indicates a required field.
@@ -47,7 +54,7 @@
             </div>
             <div class="form-item-container">
               <label for="project"
-                >Priority<span aria-label="required">*</span></label
+                >Project<span aria-label="required">*</span></label
               ><select
                 id="project-list"
                 name="project-list"
@@ -65,6 +72,8 @@
               <button type="submit">Add</button>
             </div>
           </form>
+          <!-- </dialog> -->
+          <!-- <dialog> -->
           <form id="project-form">
             <div class="form-item-container">
               <label for="project-name"
@@ -81,6 +90,7 @@
               <button type="submit">Add Project</button>
             </div>
           </form>
+          <!-- </dialog> -->
         </div>
         <div class="to-do-container">
           <h2>To Do List</h2>
