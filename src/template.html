@@ -16,7 +16,7 @@
       <div class="content-container app">
         <div class="sidebar">
           <h2>Sidebar</h2>
-          <form>
+          <form id="task-form">
             <p>
               <span aria-label="required">*</span> indicates a required field.
             </p>
@@ -46,7 +46,35 @@
               ><input id="priority" name="priority" type="text" required />
             </div>
             <div class="form-item-container">
-              <button type="submit">Add to Do</button>
+              <label for="project"
+                >Priority<span aria-label="required">*</span></label
+              ><select id="project" name="project" form="task-form" required>
+                <option value="default-project">Uncategorized</option>
+                <optgroup label="">
+                  <option value="example-one">example 1</option>
+                  <option value="example-two">example 2</option>
+                  <option value="example-three">example 3</option>
+                </optgroup>
+              </select>
+            </div>
+            <div class="form-item-container">
+              <button type="submit">Add</button>
+            </div>
+          </form>
+          <form id="project-form">
+            <div class="form-item-container">
+              <label for="project-name"
+                >Project Name<span aria-label="required">*</span></label
+              >
+              <input
+                type="text"
+                id="project-name"
+                name="project-name"
+                required
+              />
+            </div>
+            <div class="form-item-container">
+              <button type="submit">Add Project</button>
             </div>
           </form>
         </div>

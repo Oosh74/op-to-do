@@ -2,7 +2,7 @@ import { ToDoFactory } from './todoFactory.js';
 import { renderList } from '../ui-components/toDoListUI.js';
 
 const ToDoForm = (toDoListInstance) => {
-  const form = document.querySelector('form');
+  const form = document.querySelector('#task-form');
 
   form.addEventListener('submit', (event) => {
     event.preventDefault();
