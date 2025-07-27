@@ -48,13 +48,17 @@
             <div class="form-item-container">
               <label for="project"
                 >Priority<span aria-label="required">*</span></label
-              ><select id="project" name="project" form="task-form" required>
+              ><select
+                id="project-list"
+                name="project-list"
+                form="task-form"
+                required
+              >
                 <option value="default-project">Uncategorized</option>
-                <optgroup label="">
-                  <option value="example-one">example 1</option>
-                  <option value="example-two">example 2</option>
-                  <option value="example-three">example 3</option>
-                </optgroup>
+                <optgroup
+                  label="Projects"
+                  class="project-list-group"
+                ></optgroup>
               </select>
             </div>
             <div class="form-item-container">

@@ -1,3 +1,5 @@
+const projectClassStore = [];
+
 class ToDoList {
   constructor() {
     this.toDoList = [];
@@ -26,12 +28,25 @@ class Project extends ToDoList {
   }
 }
 
-const toDoListProjects = () => {
-  const newProject = new Project('Due Today');
-  newProject.addToDo('Get groceries', 'take a piss');
-  console.log(newProject);
-  newProject.removeToDo('Get groceries');
-  console.log(newProject);
+const newProjectForm = () => {
+  const projectForm = document.querySelector('#project-form');
+  const projectOptionsField = document.querySelector('.project-list-group');
+
+  projectForm.addEventListener('submit', (event) => {
+    event.preventDefault();
+    const newProject = new Project(event.target[0].value);
+    newProject.addToDo('Get groceries');
+    newProject.addToDo('take a piss');
+    newProject.removeToDo('Get groceries');
+    projectClassStore.push(newProject);
+    projectForm.reset();
+
+    projectClassStore.map((project) => {
+      const projectOption = document.createElement('option');
+      projectOption.textContent = project.projectName;
+      projectOptionsField.append(projectOption);
+    });
+  });
 };
 
-export { ToDoList, toDoListProjects };
+export { ToDoList, newProjectForm };
