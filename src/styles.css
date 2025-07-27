@@ -201,6 +201,20 @@ header {
   background-color: white;
 }
 
+header .content-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.add-task {
+  background-color: blue;
+  color: white;
+  padding: 16px 24px;
+  border-radius: 12px;
+}
+
 .content-container {
   max-width: 1600px;
   width: 90%;
