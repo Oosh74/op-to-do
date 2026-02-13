@@ -1,5 +1,6 @@
 import { ToDoFactory } from './todoFactory.js';
 import { renderList } from '../ui-components/toDoListUI.js';
+import { Project } from './toDoList.js';
 
 const ToDoForm = (toDoListInstance) => {
   const form = document.querySelector('#task-form');

@@ -1,3 +1,4 @@
+import { renderList } from '../ui-components/toDoListUI.js';
 const projectClassStore = [];
 
 class ToDoList {
@@ -50,10 +51,14 @@ const newProjectForm = () => {
       const projectListItem = document.createElement('li');
       projectOption.textContent = project.projectName;
       projectListItem.textContent = project.projectName;
+      projectListItem.addEventListener('click', (event) => {
+        console.log(projectClassStore);
+      });
+
       projectOptionsField.append(projectOption);
       sidebarProjectList.appendChild(projectListItem);
     });
   });
 };
 
-export { ToDoList, newProjectForm };
+export { ToDoList, newProjectForm, Project };
